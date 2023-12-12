@@ -240,26 +240,8 @@ void polymultmonom(PairVector& M, int  n)
     M = R;
 }
 
-int main()
+double coeff(std::vector<int>& I, std::vector<int>& n, int k)
 {
-    //ввод входных данных
-    std::cout << "input k >= 2 - the number of degrees and i-values: ";
-    int k;
-    std::cin >> k;
-    std::cout << "\ninput the i-values: \n";
-    std::vector<int> I;
-    for (int x = 0; x < k; x++)
-    {
-        int tmp;
-        std::cin >> tmp;
-        I.push_back(tmp);
-    }
-    std::cout << "\nInput in one line the values of the degrees - int numbers:\n";
-    std::vector<int> n(k, 0);
-    for (int x = 0; x < k; x++)
-    {
-        std::cin >> n[x];
-    }
     //Начало работы функции
     PairVector M;
     M.push_back(Pair{ I[0], 1 });
@@ -279,5 +261,33 @@ int main()
         polymultmonom(M, n[k - 1]);
     double Ans = polymultint(M, I[k - 1]);
 
-    printf("we get this number : %g\n", Ans);
+    return Ans;
 }
+
+int main()
+{
+    //ввод входных данных
+    std::cout << "Input k >= 2 - the number of degrees: ";
+    int k;
+    std::cin >> k;
+    std::cout << "\nInput in one line the values of the degrees - int numbers:\n";
+    std::vector<int> n(k, 0);
+    for (int x = 0; x < k; x++)
+    {
+        std::cin >> n[x];
+    }
+    std::cout << "\nInput L >= 1 - an integer, the limiting parameter for the i-values: \n";
+    int L;
+    std::cin >> L;
+    std::vector<int> I(k, 0);
+    //первая итерация - при всех i = 0
+    coeff(I, n, k);
+    //главный цикл
+    for (int t = 1; t < L; t++)
+        for (int e = k - 1; e >= 0; e--)
+        {
+            I[e] = t;
+            printf(" % g\n", coeff(I, n, k));
+        }
+}
+

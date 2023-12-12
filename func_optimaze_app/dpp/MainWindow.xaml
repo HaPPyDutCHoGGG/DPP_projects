@@ -1,0 +1,46 @@
+﻿<Window x:Class="dpp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:dpp"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        mc:Ignorable="d"
+            Title="MainWindow" Height="700" Width="965" WindowStyle="None">
+
+    <Grid Background="LightSteelBlue">
+        <Image Source="C:\Users\anton\source\repos\dpp\Resources\fon.jpg" Margin="0,0,0,3" MouseDown="Image_MouseDown"></Image>
+        <Border MinWidth="400" Height="400" Margin="15,0,15,0" Background="White" VerticalAlignment="Center" Padding="30" MaxWidth="550" CornerRadius="20">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="Gray" ShadowDepth="0" />
+            </Border.Effect>
+            <StackPanel>
+                <Grid Margin="0 0 0 20" Width="494" RenderTransformOrigin="0.117,0.531" Height="70">
+                    <Button Margin="10,10,418,16" Click="Button_Click" RenderTransformOrigin="0.5,0.5">
+                        <Button.Template>
+                            <ControlTemplate  TargetType="Button">
+                                <Grid>
+                                    <Ellipse Fill="White"></Ellipse>
+                                    <Image  Source="C:\Users\anton\source\repos\dpp\Resources\nowatermark.png"></Image>
+                                </Grid>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </Grid>
+                <Grid Margin="0 0 0 0" Width="201" RenderTransformOrigin="0.117,0.531" Height="95">
+                    <Image gif:ImageBehavior.RepeatBehavior="Forever" gif:ImageBehavior.AnimatedSource="C:\Users\anton\source\repos\dpp\Resources\cirkuliruyushiy-tor.gif" Source="C:\Users\anton\source\repos\dpp\Resources\cirkuliruyushiy-tor.gif" Margin="0,-29,0,29"></Image>
+
+                </Grid>
+                <ComboBox x:Name="ComboBox1">
+                    <TextBlock><Run Text="Функция Розенброка" FontWeight="Bold"/></TextBlock>
+                    <TextBlock><Run Text="Функция Растригина" FontWeight="Bold"/></TextBlock>
+                    <TextBlock><Run Text="окружность" FontWeight="Bold"/></TextBlock>
+                </ComboBox>
+                <TextBox>Выберите функцию</TextBox>
+                <Button Content="Оптимизировать!" Margin="0 15 0 0" Click="Button_Click_1"/>
+                <Button Content="Просмотреть результат" Margin="0 10 0 0" Click="Button_Click_2"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

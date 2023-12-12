@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dpp", "dpp.csproj", "{ABBF449A-9DBB-4B63-95FC-7FA18056022E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{84F8B18A-E8A5-4DEF-958B-51C9D223F165}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\OneDrive\Рабочий стол\рабочий стол\1.py = ..\..\..\OneDrive\Рабочий стол\рабочий стол\1.py
+		..\..\..\OneDrive\Рабочий стол\учеба\2.py = ..\..\..\OneDrive\Рабочий стол\учеба\2.py
+		..\..\..\OneDrive\Рабочий стол\учеба\3.py = ..\..\..\OneDrive\Рабочий стол\учеба\3.py
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABBF449A-9DBB-4B63-95FC-7FA18056022E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABBF449A-9DBB-4B63-95FC-7FA18056022E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABBF449A-9DBB-4B63-95FC-7FA18056022E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABBF449A-9DBB-4B63-95FC-7FA18056022E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4825635D-CAFE-4C7B-8E88-93443E9155CF}
+	EndGlobalSection
+EndGlobal
